@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simply Salad - Fresh & Healthy</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #f29c9c;
+            --secondary: #088c0a;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .hero-section {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                        url('https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-4.0.3') center/cover;
+            height: 80vh;
+        }
+        .nav-blur {
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .whatsapp-btn {
+            animation: bounce 2s infinite;
+        }
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+            40% {transform: translateY(-20px);}
+            60% {transform: translateY(-10px);}
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Banner -->
+    <div class="bg-green-600 text-white py-2 px-4 text-sm">
+        <div class="container mx-auto flex justify-between items-center">
+            <div>Order Now: (+91) 7990409867</div>
+            <select class="bg-transparent border-none">
+                <option>Select Location</option>
+                <option>Ahmedabad</option>
+                <option>Gandhinagar</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white bg-opacity-90 nav-blur shadow-md">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <a href="#" class="text-2xl font-bold text-green-600">Simply Salad</a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#" class="text-gray-700 hover:text-green-600">Home</a>
+                    <a href="#subscriptions" class="text-gray-700 hover:text-green-600">Our Subscriptions</a>
+                    <a href="#about" class="text-gray-700 hover:text-green-600">About Us</a>
+                    <a href="#contact" class="text-gray-700 hover:text-green-600">Contact</a>
+                </div>
+                <div class="relative">
+                    <i class="bi bi-cart text-xl"></i>
+                    <span class="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">0</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section flex items-center justify-center text-center text-white">
+        <div class="container mx-auto px-4">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">Soch Swad Aur Sehat Ka Samanvay Hai</h1>
+            <p class="text-xl mb-8">The Simply Salad</p>
+            <button class="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-full transition-all">
+                Order Now
+            </button>
+        </div>
+    </section>
+
+    <!-- Subscription Plans -->
+    <section id="subscriptions" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Get Your Subscription Now</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Weekly Plan -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
+                    <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c" class="w-full h-48 object-cover" alt="Weekly Plan">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-4">Weekly Subscription</h3>
+                        <p class="text-gray-600 mb-4">Fresh salads delivered to your doorstep every week</p>
+                        <p class="text-green-600 font-bold text-2xl mb-4">₹999/week</p>
+                        <button class="w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition-all">
+                            Subscribe Now
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Monthly Plan -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
+                    <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999" class="w-full h-48 object-cover" alt="Monthly Plan">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-4">Monthly Subscription</h3>
+                        <p class="text-gray-600 mb-4">Best value for regular healthy eaters</p>
+                        <p class="text-green-600 font-bold text-2xl mb-4">₹3499/month</p>
+                        <button class="w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition-all">
+                            Subscribe Now
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Detox Plan -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
+                    <img src="https://images.unsplash.com/photo-1556040220-4096d522378d" class="w-full h-48 object-cover" alt="Detox Plan">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-4">Detox Subscription</h3>
+                        <p class="text-gray-600 mb-4">Special detox program for health enthusiasts</p>
+                        <p class="text-green-600 font-bold text-2xl mb-4">₹1499/week</p>
+                        <button class="w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition-all">
+                            Subscribe Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/917990409867" class="fixed bottom-8 right-8 bg-green-500 text-white rounded-full p-4 shadow-lg whatsapp-btn">
+        <i class="bi bi-whatsapp text-2xl"></i>
+    </a>
+
+    <!-- Footer -->
+    <footer class="bg-green-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h4 class="text-xl font-bold mb-4">Store Locations</h4>
+                    <p>Ahmedabad</p>
+                    <p>Gandhinagar</p>
+                </div>
+                <div class="text-center">
+                    <h4 class="text-xl font-bold mb-4">Connect With Us</h4>
+                    <div class="flex justify-center space-x-4">
+                        <a href="#" class="hover:text-green-400"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="hover:text-green-400"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="hover:text-green-400"><i class="bi bi-twitter"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold mb-4">Quick Links</h4>
+                    <ul>
+                        <li><a href="#" class="hover:text-green-400">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-green-400">Terms & Conditions</a></li>
+                        <li><a href="#" class="hover:text-green-400">FAQs</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-center mt-8 pt-8 border-t border-green-700">
+                <p>&copy; 2024 Simply Salad. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Navbar Scroll Effect
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                nav.classList.add('shadow-md');
+            } else {
+                nav.classList.remove('shadow-md');
+            }
+        });
+
+        // Cart Functionality
+        let cartCount = 0;
+        const cartBadge = document.querySelector('.bi-cart + span');
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('click', function() {
+                if (this.textContent.trim().toLowerCase().includes('subscribe')) {
+                    cartCount++;
+                    cartBadge.textContent = cartCount;
+                    alert('Subscription added to cart!');
+                }
+            });
+        });
+
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+<script>document.body.addEventListener('wheel', e => { if (!e.ctrlKey) return; e.preventDefault(); return }, { passive: false })</script>
+	</body>
+</html>
